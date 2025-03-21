@@ -1,4 +1,3 @@
-// Referencia base: https://www.geeksforgeeks.org/binary-search-tree-set-1-search-and-insertion/
 public class BinarySearchTree<E extends Comparable<E>> {
     class Node {
         E data;
