@@ -1,3 +1,6 @@
+/**
+ * Clase que representa un producto con SKU, nombre y precio.
+ */
 public class Product implements Comparable<Product> {
     private String sku;
     private String name;
@@ -10,22 +13,11 @@ public class Product implements Comparable<Product> {
     }
 
     public String getSku() { return sku; }
+    public String getName() { return name; }
+    public double getPrice() { return price; }
 
     @Override
     public int compareTo(Product other) {
         return this.sku.compareTo(other.sku);
-    }
-
-    @Override
-    public String toString() {
-        return "SKU: " + sku + ", Name: " + name + ", Price: " + price;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (obj instanceof Product other) {
-            return this.sku.equals(other.sku);
-        }
-        return false;
     }
 }
